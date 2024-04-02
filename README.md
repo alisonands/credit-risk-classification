@@ -12,9 +12,8 @@ The scikit-learn library was used for the Logistic Regression analysis to train 
 
 ### Results
 **Confusion matrix**
-|||
-|:----:|:----:|
 | 14940 |  71 |
+|:-----:|:---:|
 |   11  | 486 |
 
 
