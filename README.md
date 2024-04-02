@@ -10,5 +10,23 @@ In this analysis, shallow learning was used to train the model, to determine pot
 #### Using Scikit-learn
 The scikit-learn library was used for the Logistic Regression analysis to train the model. The dataset was split into a test size of 0.2 and train size of 0.8. The data is scaled using the StandardScaler module, given the variation in the dataset values.
 
+### Results
+**Confusion matrix**
+|       |     |
+|:-----:|:---:|
+| 14940 |  71 |
+|   11  | 486 |
+
+
+**Classification report**
+|   | Recall | Precision | f1-score |
+|:-:|:------:|:---------:|:--------:|
+| 0 |  1.00  |    1.00   |   1.00   |
+| 1 |  0.87  |    0.98   |   0.92   |
+
+$\text{Accuracy} = \frac{14940 + 486}{14940 + 71 + 11 + 486} = 99.4\% $
+
 ### Analysis
-By looking at the classification report, we see that the recall 
+By looking at the classification report, we see that the recall and precision scores are 100% for predicting 0, the 'healthy' loans, and 87% and 98% for the high-risk loans, respectively. As the recall determines how often there are false negatives, 98% is a strong value for determining the high-risk labels, and we can conclude that this model can be used to determine the outcome of the loan status. Additionally, the accuracy is 99.4%, which will return strong predictions for the data. 
+
+As with all ML models, these results should expect inaccuracies in some cases, and should be wary when determining the status of the high-risk credit loans.
